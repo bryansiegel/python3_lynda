@@ -1,8 +1,8 @@
 class Animal:
-    def __init__(self, type, name, sound):
-        self._type = type
-        self._name = name
-        self._sound = sound
+    def __init__(self, **kwargs):
+        self._type = kwargs['type']
+        self._name = kwargs['name']
+        self._sound = kwargs['sound']
     
     def type(self):
         return self._type
@@ -19,10 +19,10 @@ def print_animal(o):
     print('The {} is named "{}" and says "{}".'.format(o.type(), o.name(), o.sound()))
 
 def main():
-    a0 = Animal('kitten', 'fluffy', 'rwar')
-    a1 = Animal('duck', 'donald', 'quack')
+    a0 = Animal(type='kitten',name='fluffy',sound='rwar')
+    a1 = Animal(type='duck', name='donald', sound='quack')
     print_animal(a0)
     print_animal(a1)
-    print_animal(Animal('velociraptor', 'veronica', 'hello'))
+    print_animal(Animal(type='velociraptor', name='veronica', sound='hello'))
 
 if __name__ == "__main__": main()
