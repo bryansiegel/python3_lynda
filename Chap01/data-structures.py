@@ -4,8 +4,12 @@ l = [1, 2, 3, 4, 5]
 ls = ['bryan', 'summer', 'haileigh', 'logun']
 # new_ls = sorted(ls)
 # print(new_ls)
-for i in range(len(ls)):
-    print(str(i) + " " + ls[i])
+# for i in range(len(ls)):
+#     print(str(i) + " " + ls[i])
+
+for i, name in enumerate(ls):
+    print(str(i) + " " + name)  
+
 # res = zip(l, ls)
 # print(list(res))
 
